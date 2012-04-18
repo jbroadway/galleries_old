@@ -1,0 +1,6 @@
+{% foreach galleries %}
+<div class="galleries-item">
+	<h3><a href="/galleries/{{ loop_value->id }}">{{ loop_value->title }}</a></h3>
+	<a href="/galleries/{{ loop_value->id }}"><img src="{{ loop_value->cover ()|filemanager_get_thumbnail }}" /></a>
+</div>
+{% end %}

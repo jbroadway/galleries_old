@@ -1,0 +1,9 @@
+.galleries-item {
+	width: 30%;
+	margin-right: 3%;
+	padding: 5px;
+	background: #fff;
+	-webkit-box-shadow: 1px 1px 5px rgba(0,0,0,.25);
+	-moz-box-shadow: 1px 1px 5px rgba(0,0,0,.25);
+	box-shadow: 1px 1px 5px rgba(0,0,0,.25);
+}

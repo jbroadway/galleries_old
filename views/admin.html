@@ -1,0 +1,26 @@
+<p><a href="/galleries/add">{"Add Gallery"}</a></p>
+
+<p>
+<table width="100%">
+	<tr>
+		<th width="35%">{"Gallery"}</th>
+		<th width="15%">{"Images"}</th>
+		<th width="25%">{"Created"}</th>
+		<th width="25%">&nbsp;</th>
+	</tr>
+{% foreach galleries %}
+	<tr>
+		<td>{{ loop_value->title }}</td>
+		<td>{{ $data->loop_value->images ()|count }}</td>
+		<td>{{ loop_value->ts|I18n::datetime }}</td>
+		<td>
+			<a href="/galleries/images?id={{ loop_value->id }}">{"Images"}</a>
+			&nbsp;|&nbsp;
+			<a href="/galleries/edit?id={{ loop_value->id }}">{"Settings"}</a>
+			&nbsp;|&nbsp;
+			<a href="/galleries/delete?id={{ loop_value->id }}" onclick="return confirm ('{"Are you sure you want to delete this gallery?"}')">{"Delete"}</a>
+		</td>
+	</tr>
+{% end %}
+</table>
+</p>
